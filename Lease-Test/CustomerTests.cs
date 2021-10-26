@@ -3,9 +3,6 @@ using EcoLease_Admin.Validators;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Xunit.EcoLease_Admin.test
 {
@@ -21,7 +18,7 @@ namespace Xunit.EcoLease_Admin.test
         //runs each test
         [Theory]
         [ClassData(typeof(CustomerData))]
-        public void CreateVehicle_ShouldAValidVehicle(bool expected, Customer c)
+        public void CreateCustomer_ShouldAValidCustomer(bool expected, Customer c)
         {
             //Arrange => expected;
 

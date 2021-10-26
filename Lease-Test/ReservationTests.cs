@@ -3,9 +3,6 @@ using EcoLease_Admin.Validators;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Xunit.EcoLease_Admin.test
 {
@@ -20,8 +17,8 @@ namespace Xunit.EcoLease_Admin.test
 
         //runs each test
         [Theory]
-        [ClassData(typeof(CustomerData))]
-        public void CreateVehicle_ShouldAValidVehicle(bool expected, Reservation r)
+        [ClassData(typeof(ReservationData))]
+        public void CreateReservation_ShouldAReservation(bool expected, Reservation r)
         {
             //Arrange => expected;
 
@@ -33,7 +30,7 @@ namespace Xunit.EcoLease_Admin.test
         }
 
         //creates the test objects
-        public class CustomerData : IEnumerable<object[]>
+        public class ReservationData : IEnumerable<object[]>
         {
             public IEnumerator<object[]> GetEnumerator()
             {
